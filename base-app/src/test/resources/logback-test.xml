@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--%date [%thread] %-5level %logger{5} - %message%n%stack{5,1}-->
+            <pattern>%d %5p %40.40c:%4L - [%thread] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.hibernate" level="info"/>
+    <logger name="com.xunkutech" level="debug"/>
+
+    <root level="error">
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>
